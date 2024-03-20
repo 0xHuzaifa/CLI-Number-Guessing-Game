@@ -1,5 +1,9 @@
+#!/usr/bin/env node
+
 import inquirer from "inquirer";
 
+let win: number = 0;
+let loss: number = 0;
 
 async function GuessGame() {   
     const systemGeneratedNumber: number = Math.floor(Math.random() * 10);
@@ -28,10 +32,15 @@ async function result() {
             console.log(`Wao! great you guess the right number. You Win!`);
             console.log("Your Guess:", guess);
             console.log("The Number:", systemGeneratedNumber);
+            win += 1; 
+            console.log(`Total Win: ${win}, Total Loss: ${loss}`);
+            
         } else {
             console.log(`Ops! you guess the wrong number. Better luck next time.`);
             console.log("Your Guess:", guess);
             console.log("The Number:", systemGeneratedNumber);
+            loss += 1;
+            console.log(`Total Win: ${win}, Total Loss: ${loss}`);
         }
         
         let choose = await inquirer.prompt({

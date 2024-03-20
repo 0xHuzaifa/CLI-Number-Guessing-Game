@@ -1,12 +1,13 @@
 {
-  "name": "cli-number-gussing-game",
-  "version": "1.0.0",
+  "name": "cli-typescript-numbergame",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./numberGuess.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
